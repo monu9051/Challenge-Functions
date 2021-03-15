@@ -1,0 +1,21 @@
+def char_frequency(str1):
+    str1=(input("Please enter a string:"))
+    d={}
+    for n in str1:
+        keys=d.keys()
+        if n in keys:
+            d[n]+=1
+        else:
+            d[n]=1
+    nd=sorted(d,key=d.__getitem__)[::-1]
+    res=""
+    for i in nd:
+        res+=i+'='+str(d[i])+"\n"
+    return res
+print(char_frequency('str1'))
+    
+#Please enter a string:Mississippi
+#s=4
+#i=4
+#p=2
+#M=1
